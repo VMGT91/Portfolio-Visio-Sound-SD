@@ -106,7 +106,7 @@ body {
 }
 
 /* ==========================================================================
-   FONDOS DE ONDAS ORIGINALES POR DIAPOSITIVA (Conexión Continua Oficial)
+   FONDOS DE ONDAS ORIGINALES POR DIAPOSITIVA (Conexión Continua Oficial 1 a 7)
    ========================================================================== */
 .slide-bg-layer {
   position: absolute;
@@ -115,43 +115,54 @@ body {
   height: 100%;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 100% 100%; /* Estira el fondo en formato horizontal web sin barras negras */
+  background-size: 100% 100%;
   pointer-events: none;
   z-index: 1;
+  opacity: 0.76;
   transition: opacity 0.5s ease;
 }
 
 #slide-1 .slide-bg-layer {
-  background-image: url('assets/bg-page-1.png');
+  background-image: url('assets/Imagenes%20back/1.png?v=2');
 }
 
 #slide-2 .slide-bg-layer {
-  background-image: url('assets/bg-page-2.png');
+  background-image: url('assets/Imagenes%20back/2.png?v=2');
 }
 
 #slide-3 .slide-bg-layer {
-  background-image: url('assets/bg-page-2.png'); /* Continuidad visual exacta de ondas */
+  background-image: url('assets/Imagenes%20back/3.png?v=2');
 }
 
 #slide-4 .slide-bg-layer {
-  background-image: url('assets/bg-page-3.png');
+  background-image: url('assets/Imagenes%20back/4.png?v=2');
 }
 
 #slide-5 .slide-bg-layer {
-  background-image: url('assets/bg-page-4.png');
+  background-image: url('assets/Imagenes%20back/5.png?v=2');
 }
 
 #slide-6 .slide-bg-layer {
-  background-image: url('assets/bg-page-5.png');
+  background-image: url('assets/Imagenes%20back/6.png?v=2');
+  opacity: 0.68; /* Contraste balanceado para no competir con el stack técnico central */
 }
 
 #slide-7 .slide-bg-layer {
-  background-image: url('assets/bg-page-6.png');
+  background-image: url('assets/Imagenes%20back/7.png?v=2');
 }
 
-@media (max-width: 820px), (max-aspect-ratio: 1/1) {
+/* En orientación vertical / portrait (celulares verticales, tablets en vertical): cover */
+@media (orientation: portrait), (max-aspect-ratio: 1/1) {
   .slide-bg-layer {
-    background-size: cover; /* En móvil mantiene su proporción vertical original */
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+/* En orientación horizontal / landscape (PC widescreen, laptop, tablet horizontal, celular apaisado): 100% 100% */
+@media (orientation: landscape) and (min-aspect-ratio: 1/1) {
+  .slide-bg-layer {
+    background-size: 100% 100%;
     background-position: center center;
   }
 }
@@ -195,14 +206,22 @@ body {
 .sub-white {
   color: var(--text-white);
   font-family: var(--font-body);
-  font-size: clamp(0.95rem, 2vw, 1.25rem);
+  font-size: clamp(0.74rem, 1.35vw, 0.98rem);
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 .cyan-txt {
+  color: var(--cyan-primary);
+}
+
+.brand-white {
+  color: var(--text-white);
+}
+
+.brand-accent {
   color: var(--cyan-primary);
 }
 
@@ -290,11 +309,13 @@ body {
 }
 
 .highlight-name {
-  font-size: clamp(1.2rem, 2.6vw, 1.75rem);
-  font-weight: 800;
-  letter-spacing: 0.22em;
-  margin-top: 0.15rem;
+  font-size: clamp(0.74rem, 1.35vw, 0.98rem);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  margin-top: 0.2rem;
   color: var(--text-white);
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .mt-spaced {
@@ -1064,9 +1085,11 @@ body {
     margin-bottom: clamp(0.8rem, 2vh, 1.4rem);
   }
 
+  .sub-white,
   .highlight-name {
-    font-size: clamp(1.1rem, 3.8vw, 1.4rem);
-    letter-spacing: 0.16em;
+    font-size: clamp(0.66rem, 2.3vw, 0.8rem);
+    letter-spacing: 0.14em;
+    margin-top: 0.15rem;
   }
   
   .slide-watermark {
@@ -1251,5 +1274,309 @@ body {
     font-size: clamp(0.58rem, 2.4vw, 0.74rem);
     letter-spacing: 0.005em;
     white-space: nowrap;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE: MODO HORIZONTAL / SHORT VIEWPORTS (Mobile Landscape & Alturas Bajas)
+   Diseño optimizado para pantallas apaisadas (iPhone, Android, Tablets cortas)
+   ========================================================================== */
+@media (orientation: landscape) and (max-height: 600px), (max-height: 520px) {
+  /* 1. Base y Diapositivas */
+  .slide {
+    padding: clamp(0.5rem, 1.8vh, 0.9rem) clamp(1.2rem, 3.5vw, 2.2rem) clamp(1.4rem, 3.5vh, 2rem);
+    min-height: 100vh;
+    min-height: 100dvh;
+    height: 100vh;
+    height: 100dvh;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .slide-inner {
+    max-width: min(92vw, 860px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Ocultar flechas en landscape de baja altura para maximizar área táctil */
+  .slide-arrows {
+    display: none;
+  }
+
+  /* Barra lateral de navegación compacta */
+  .slide-nav {
+    right: 8px;
+    gap: 6px;
+  }
+
+  .nav-dot {
+    width: 7px;
+    height: 7px;
+  }
+
+  /* Marca de agua inferior discreta */
+  .slide-watermark {
+    bottom: 6px;
+    right: 12px;
+  }
+
+  .watermark-logo-img {
+    width: clamp(65px, 8vw, 82px);
+    opacity: 0.65;
+  }
+
+  /* Títulos de sección compactos */
+  .page-title {
+    font-size: clamp(1.35rem, 4.2vw, 1.85rem);
+    margin-bottom: clamp(0.25rem, 0.8vh, 0.45rem);
+    letter-spacing: 0.08em;
+  }
+
+  .page-title.single-line-title {
+    font-size: clamp(1.15rem, 3.2vw, 1.55rem);
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+    margin-bottom: clamp(0.25rem, 0.8vh, 0.45rem);
+  }
+
+  /* 2. Página 1: Portada */
+  .hero-top-badge {
+    top: clamp(6px, 1.5vh, 10px);
+    right: clamp(10px, 2.5vw, 16px);
+    padding: 3px 10px;
+  }
+
+  .badge-text {
+    font-size: clamp(0.72rem, 1.8vw, 0.88rem);
+    letter-spacing: 0.12em;
+  }
+
+  .brand-logo {
+    max-width: clamp(160px, 26vw, 220px);
+    margin-bottom: clamp(0.25rem, 0.8vh, 0.45rem);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(0.6rem, 1.5vw, 0.74rem);
+    letter-spacing: 0.12em;
+    line-height: 1.25;
+    margin-bottom: clamp(0.25rem, 0.8vh, 0.45rem);
+  }
+
+  .sub-white,
+  .highlight-name {
+    font-size: clamp(0.55rem, 1.4vw, 0.68rem);
+    letter-spacing: 0.12em;
+    margin-top: 0.1rem;
+  }
+
+  /* 3. Páginas 2 y 3: Showreels */
+  .video-showcase-wrapper {
+    max-width: min(65vw, 380px);
+  }
+
+  .video-slide-subtitle {
+    font-size: clamp(0.65rem, 1.7vw, 0.76rem);
+    margin-bottom: clamp(0.25rem, 0.6vh, 0.4rem);
+    line-height: 1.25;
+    max-width: 580px;
+  }
+
+  .central-play-circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .central-play-circle svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .video-help-caption {
+    font-size: 0.62rem;
+    margin-top: 0.25rem;
+  }
+
+  /* 4. Página 4: Experiencias Destacadas */
+  .stats-badge {
+    padding: 3px 14px;
+    margin-bottom: clamp(0.35rem, 0.8vh, 0.6rem);
+    gap: 0.4rem;
+  }
+
+  .stat-item {
+    font-size: clamp(0.62rem, 1.6vw, 0.74rem);
+    letter-spacing: 0.08em;
+  }
+
+  .content-list-group {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: clamp(0.3rem, 0.8vh, 0.5rem) clamp(0.8rem, 2vw, 1.6rem);
+    max-width: 820px;
+    align-items: start;
+    text-align: left;
+  }
+
+  .content-list-group .experience-card:first-child {
+    grid-column: 1;
+  }
+
+  .content-list-group .experience-card:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .content-list-group .experience-card:nth-child(3) {
+    grid-column: 1;
+  }
+
+  .experience-card {
+    text-align: left;
+  }
+
+  .experience-card .category-header {
+    font-size: clamp(0.68rem, 1.8vw, 0.82rem);
+    margin-bottom: 0.15rem;
+    letter-spacing: 0.12em;
+  }
+
+  .experience-line {
+    font-size: clamp(0.64rem, 1.6vw, 0.76rem);
+    line-height: 1.3;
+  }
+
+  .experience-lines-group {
+    gap: 0.15rem;
+  }
+
+  .dot-sep {
+    margin: 0 0.25rem;
+  }
+
+  /* 5. Página 5: Escenarios Principales */
+  .venues-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(0.12rem, 0.35vh, 0.25rem) clamp(0.8rem, 2vw, 1.5rem);
+    max-width: 780px;
+    text-align: left;
+  }
+
+  .venue-item {
+    font-size: clamp(0.62rem, 1.5vw, 0.74rem);
+    letter-spacing: 0.04em;
+    line-height: 1.25;
+    padding: 1px 0;
+  }
+
+  /* 6. Página 6: Stack Tecnológico */
+  .tech-stack-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(0.25rem, 0.8vw, 0.65rem);
+    max-width: 840px;
+    align-items: start;
+  }
+
+  .tech-group .category-header {
+    font-size: clamp(0.64rem, 1.6vw, 0.78rem);
+    margin-bottom: 0.15rem;
+    letter-spacing: 0.1em;
+  }
+
+  .tech-items {
+    gap: clamp(0.06rem, 0.2vh, 0.14rem);
+  }
+
+  .tech-item-row {
+    gap: 5px;
+    padding: 1px 4px;
+  }
+
+  .software-logo-img {
+    width: clamp(12px, 2.4vw, 15px);
+    height: clamp(12px, 2.4vw, 15px);
+  }
+
+  .software-logo-img.logo-grandma {
+    max-width: clamp(22px, 4.2vw, 28px);
+    height: clamp(10px, 2vw, 13px);
+  }
+
+  .software-name {
+    font-size: clamp(0.6rem, 1.5vw, 0.72rem);
+    letter-spacing: 0.05em;
+  }
+
+  /* 7. Página 7: Contactos */
+  .contact-links-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(0.3rem, 0.8vh, 0.5rem) clamp(0.8rem, 2vw, 1.4rem);
+    max-width: 680px;
+  }
+
+  .contact-row {
+    gap: 0.35rem;
+  }
+
+  .contact-link {
+    gap: 0.55rem;
+    padding: 0.25rem 0.45rem;
+  }
+
+  .icon-circle {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+  }
+
+  .icon-circle svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .copy-btn {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    padding: 4px;
+  }
+
+  .copy-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .contact-text {
+    font-size: clamp(0.68rem, 1.8vw, 0.82rem);
+  }
+
+  .email-text {
+    font-size: clamp(0.55rem, 1.4vw, 0.68rem);
+    letter-spacing: 0.002em;
+  }
+
+  /* Modal de Video en Landscape */
+  .modal-dialog {
+    max-width: min(85vw, 560px);
+  }
+
+  .modal-header {
+    padding: 0.6rem 1.2rem;
+  }
+
+  .modal-title {
+    font-size: 0.9rem;
+  }
+
+  .modal-footer {
+    padding: 0.6rem 1.2rem;
   }
 }

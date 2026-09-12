@@ -160,7 +160,7 @@ function initVideoModal() {
     document.body.style.overflow = 'hidden';
 
     if (modalTitle) {
-      modalTitle.innerHTML = `${title} &bull; <span class="cyan-txt">VISIOSOUND</span>`;
+      modalTitle.innerHTML = `${title} &bull; <span class="brand-white">VISIO</span><span class="brand-accent">SOUND</span>`;
     }
 
     // Inyectar el reproductor iframe con autoplay
