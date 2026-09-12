@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 750" width="100%" height="100%" preserveAspectRatio="none">
+<defs>
+  <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="1.5" result="blur" />
+    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+  </filter>
+</defs>
+<g filter="url(#glow)">
+  <path d="M 960.0,-294.2 C 642.3,32.9 428.2,121.2 288.8,288.8 S 49.4,143.5 -50,314.1" stroke="rgb(0,180,225)" stroke-width="1.2" stroke-opacity="0.48" fill="none" />
+  <path d="M 960.0,-282.3 C 650.0,38.9 433.3,117.8 292.2,292.2 S 51.1,147.8 -50,316.65" stroke="rgb(0,182,226)" stroke-width="1.2" stroke-opacity="0.50" fill="none" />
+  <path d="M 960.0,-270.4 C 657.6,44.8 438.4,114.4 295.6,295.6 S 52.8,152.0 -50,319.2" stroke="rgb(0,184,228)" stroke-width="1.2" stroke-opacity="0.53" fill="none" />
+  <path d="M 960.0,-258.5 C 665.2,50.8 443.5,111.0 299.0,299.0 S 54.5,156.2 -50,321.75" stroke="rgb(1,186,230)" stroke-width="1.2" stroke-opacity="0.55" fill="none" />
+  <path d="M 960.0,-246.6 C 672.9,56.7 448.6,107.6 302.4,302.4 S 56.2,160.5 -50,324.3" stroke="rgb(1,188,231)" stroke-width="1.2" stroke-opacity="0.57" fill="none" />
+  <path d="M 960.0,-234.7 C 680.5,62.7 453.7,104.2 305.8,305.8 S 57.9,164.8 -50,326.85" stroke="rgb(2,190,233)" stroke-width="1.2" stroke-opacity="0.60" fill="none" />
+  <path d="M 960.0,-222.8 C 688.2,68.6 458.8,100.8 309.2,309.2 S 59.6,169.0 -50,329.4" stroke="rgb(2,192,235)" stroke-width="1.2" stroke-opacity="0.62" fill="none" />
+  <path d="M 960.0,-210.9 C 695.9,74.5 463.9,97.4 312.6,312.6 S 61.3,173.2 -50,331.95" stroke="rgb(3,195,237)" stroke-width="1.2" stroke-opacity="0.65" fill="none" />
+  <path d="M 960.0,-199.0 C 703.5,80.5 469.0,94.0 316.0,316.0 S 63.0,177.5 -50,334.5" stroke="rgb(3,197,238)" stroke-width="1.2" stroke-opacity="0.67" fill="none" />
+  <path d="M 960.0,-187.1 C 711.1,86.5 474.1,90.6 319.4,319.4 S 64.7,181.8 -50,337.05" stroke="rgb(3,199,240)" stroke-width="1.2" stroke-opacity="0.69" fill="none" />
+  <path d="M 960.0,-175.2 C 718.8,92.4 479.2,87.2 322.8,322.8 S 66.4,186.0 -50,339.6" stroke="rgb(4,201,242)" stroke-width="1.2" stroke-opacity="0.72" fill="none" />
+  <path d="M 960.0,-163.3 C 726.5,98.3 484.3,83.8 326.2,326.2 S 68.1,190.2 -50,342.15" stroke="rgb(4,203,243)" stroke-width="1.2" stroke-opacity="0.74" fill="none" />
+  <path d="M 960.0,-151.4 C 734.1,104.3 489.4,80.4 329.6,329.6 S 69.8,194.5 -50,344.7" stroke="rgb(5,205,245)" stroke-width="1.2" stroke-opacity="0.77" fill="none" />
+  <path d="M 960.0,-139.5 C 741.8,110.2 494.5,77.0 333.0,333.0 S 71.5,198.8 -50,347.25" stroke="rgb(5,207,247)" stroke-width="1.2" stroke-opacity="0.79" fill="none" />
+  <path d="M 960.0,-127.6 C 749.4,116.2 499.6,73.6 336.4,336.4 S 73.2,203.0 -50,349.8" stroke="rgb(6,210,249)" stroke-width="1.2" stroke-opacity="0.82" fill="none" />
+  <path d="M 960.0,-115.7 C 757.0,122.2 504.7,70.2 339.8,339.8 S 74.9,207.2 -50,352.35" stroke="rgb(6,212,250)" stroke-width="1.2" stroke-opacity="0.84" fill="none" />
+  <path d="M 960.0,-103.8 C 764.7,128.1 509.8,66.8 343.2,343.2 S 76.6,211.5 -50,354.9" stroke="rgb(6,214,252)" stroke-width="1.2" stroke-opacity="0.86" fill="none" />
+  <path d="M 960.0,-91.9 C 772.4,134.1 514.9,63.4 346.6,346.6 S 78.3,215.8 -50,357.45" stroke="rgb(7,216,254)" stroke-width="1.2" stroke-opacity="0.89" fill="none" />
+  <path d="M 960.0,-80.0 C 780.0,140.0 520.0,60.0 350.0,350.0 S 80.0,220.0 -50,360.0" stroke="rgb(7,218,254)" stroke-width="1.2" stroke-opacity="0.89" fill="none" />
+  <path d="M 960.0,-68.1 C 787.6,145.9 525.1,56.6 353.4,353.4 S 81.7,224.2 -50,362.55" stroke="rgb(8,220,252)" stroke-width="1.2" stroke-opacity="0.86" fill="none" />
+  <path d="M 960.0,-56.2 C 795.3,151.9 530.2,53.2 356.8,356.8 S 83.4,228.5 -50,365.1" stroke="rgb(8,222,250)" stroke-width="1.2" stroke-opacity="0.84" fill="none" />
+  <path d="M 960.0,-44.3 C 803.0,157.8 535.3,49.8 360.2,360.2 S 85.1,232.8 -50,367.65" stroke="rgb(9,225,249)" stroke-width="1.2" stroke-opacity="0.82" fill="none" />
+  <path d="M 960.0,-32.4 C 810.6,163.8 540.4,46.4 363.6,363.6 S 86.8,237.0 -50,370.2" stroke="rgb(9,227,247)" stroke-width="1.2" stroke-opacity="0.79" fill="none" />
+  <path d="M 960.0,-20.5 C 818.2,169.8 545.5,43.0 367.0,367.0 S 88.5,241.2 -50,372.75" stroke="rgb(9,229,245)" stroke-width="1.2" stroke-opacity="0.77" fill="none" />
+  <path d="M 960.0,-8.6 C 825.9,175.7 550.6,39.6 370.4,370.4 S 90.2,245.5 -50,375.3" stroke="rgb(10,231,243)" stroke-width="1.2" stroke-opacity="0.74" fill="none" />
+  <path d="M 960.0,3.3 C 833.5,181.7 555.7,36.2 373.8,373.8 S 91.9,249.8 -50,377.85" stroke="rgb(10,233,242)" stroke-width="1.2" stroke-opacity="0.72" fill="none" />
+  <path d="M 960.0,15.2 C 841.2,187.6 560.8,32.8 377.2,377.2 S 93.6,254.0 -50,380.4" stroke="rgb(11,235,240)" stroke-width="1.2" stroke-opacity="0.69" fill="none" />
+  <path d="M 960.0,27.1 C 848.9,193.6 565.9,29.4 380.6,380.6 S 95.3,258.2 -50,382.95" stroke="rgb(11,237,238)" stroke-width="1.2" stroke-opacity="0.67" fill="none" />
+  <path d="M 960.0,39.0 C 856.5,199.5 571.0,26.0 384.0,384.0 S 97.0,262.5 -50,385.5" stroke="rgb(12,240,237)" stroke-width="1.2" stroke-opacity="0.65" fill="none" />
+  <path d="M 960.0,50.9 C 864.1,205.4 576.1,22.6 387.4,387.4 S 98.7,266.8 -50,388.05" stroke="rgb(12,242,235)" stroke-width="1.2" stroke-opacity="0.62" fill="none" />
+  <path d="M 960.0,62.8 C 871.8,211.4 581.2,19.2 390.8,390.8 S 100.4,271.0 -50,390.6" stroke="rgb(12,244,233)" stroke-width="1.2" stroke-opacity="0.60" fill="none" />
+  <path d="M 960.0,74.7 C 879.5,217.3 586.3,15.8 394.2,394.2 S 102.1,275.2 -50,393.15" stroke="rgb(13,246,231)" stroke-width="1.2" stroke-opacity="0.57" fill="none" />
+  <path d="M 960.0,86.6 C 887.1,223.3 591.4,12.4 397.6,397.6 S 103.8,279.5 -50,395.7" stroke="rgb(13,248,230)" stroke-width="1.2" stroke-opacity="0.55" fill="none" />
+  <path d="M 960.0,98.5 C 894.8,229.2 596.5,9.0 401.0,401.0 S 105.5,283.8 -50,398.25" stroke="rgb(14,250,228)" stroke-width="1.2" stroke-opacity="0.53" fill="none" />
+  <path d="M 960.0,110.4 C 902.4,235.2 601.6,5.6 404.4,404.4 S 107.2,288.0 -50,400.8" stroke="rgb(14,252,226)" stroke-width="1.2" stroke-opacity="0.50" fill="none" />
+  <path d="M 960.0,122.3 C 910.0,241.1 606.7,2.2 407.8,407.8 S 108.9,292.2 -50,403.35" stroke="rgb(15,255,225)" stroke-width="1.2" stroke-opacity="0.48" fill="none" />
+</g>
+</svg>

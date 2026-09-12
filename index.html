@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VisioSound | Stage Design - Víctor Garay</title>
+  <meta name="description" content="Portfolio de VisioSound Stage Design - Dirección Visual & Técnica, Diseño Escénico Integral, Pantallas LED, Iluminación y Operación en Vivo por Víctor Garay.">
+  
+  <!-- Google Fonts: Bebas Neue Regular para VisioSound y títulos, Roboto para Stage Design, Montserrat para textos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css?v=6">
+</head>
+<body>
+
+  <!-- Floating Slide Navigation (Dots) -->
+  <nav class="slide-nav" id="slideNav" aria-label="Navegación de diapositivas">
+    <button class="nav-dot active" data-target="slide-1" aria-label="Portada" title="01. Portada"></button>
+    <button class="nav-dot" data-target="slide-2" aria-label="Producciones en Vivo" title="02. Producciones en Vivo"></button>
+    <button class="nav-dot" data-target="slide-3" aria-label="Previsualización &amp; Workflow" title="03. Previsualización &amp; Workflow"></button>
+    <button class="nav-dot" data-target="slide-4" aria-label="Experiencias Destacadas" title="04. Experiencias Destacadas"></button>
+    <button class="nav-dot" data-target="slide-5" aria-label="Escenarios Principales" title="05. Escenarios Principales"></button>
+    <button class="nav-dot" data-target="slide-6" aria-label="Stack Tecnológico" title="06. Stack Tecnológico"></button>
+    <button class="nav-dot" data-target="slide-7" aria-label="Contactos" title="07. Contactos"></button>
+  </nav>
+
+  <!-- Slide Arrows (Desktop/Tablet) -->
+  <div class="slide-arrows">
+    <button id="btnPrevSlide" class="arrow-btn" aria-label="Diapositiva anterior" title="Anterior">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+    <button id="btnNextSlide" class="arrow-btn" aria-label="Siguiente diapositiva" title="Siguiente">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+  </div>
+
+  <!-- Toast Notification for Copying Actions -->
+  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+  <!-- Main Presentation Slides Container -->
+  <main class="portfolio-container" id="portfolioContainer">
+
+    <!-- ========================================================
+         PAGE 1: PORTADA / HERO
+         ======================================================== -->
+    <section class="slide slide-hero" id="slide-1">
+      <div class="slide-bg-layer" aria-hidden="true"></div>
+
+      <header class="hero-top-badge">
+        <span class="badge-text">PORTFOLIO</span>
+      </header>
+
+      <div class="slide-inner hero-content">
+        <!-- Main Logo (Logo Oficial con justificación exacta) -->
+        <div class="brand-logo">
+          <img src="assets/visiosound-official-logo.png?v=2" alt="VisioSound Stage Design" class="official-brand-logo">
+        </div>
+
+        <!-- Hero Subtitles -->
+        <div class="hero-info-group">
+          <div class="info-block">
+            <h2 class="sub-cyan">DIRECCIÓN VISUAL &amp; TÉCNICA</h2>
+            <h3 class="sub-white highlight-name">VICTOR GARAY</h3>
+          </div>
+
+          <div class="info-block mt-spaced">
+            <h2 class="sub-cyan">DISEÑO ESCÉNICO INTEGRAL</h2>
+            <p class="sub-white">PANTALLAS LED, ILUMINACIÓN Y<br>OPERACIÓN EN VIVO</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 2: PRODUCCIONES EN VIVO
+         ======================================================== -->
+    <section class="slide" id="slide-2">
+      <div class="slide-bg-layer" aria-hidden="true"></div>
+
+      <div class="slide-inner video-slide-content">
+        <h2 class="page-title single-line-title">
+          PRODUCCIONES EN VIVO
+        </h2>
+
+        <p class="video-slide-subtitle">
+          Dirección visual, operación de pantallas y diseño lumínico en tiempo real a lo largo de más de 50 puestas escénicas.
+        </p>
+
+        <!-- Video Player Card (16:9 Aspect Ratio) -->
+        <div class="video-showcase-wrapper">
+          <div class="video-screen-card" 
+               role="button" 
+               tabindex="0" 
+               data-video-url="https://www.youtube.com/embed/dYZq2w_sbA0?autoplay=1&rel=0" 
+               data-video-title="PRODUCCIONES EN VIVO" 
+               aria-label="Reproducir video de Producciones en Vivo">
+            <img src="assets/thumb-showreel-01.jpg" alt="Miniatura de Producciones en Vivo" class="video-thumb-img">
+            <div class="video-ambient-overlay">
+              <div class="ambient-glow"></div>
+              <div class="stage-grid-lines"></div>
+            </div>
+            <!-- Central Cyan Play Button -->
+            <div class="central-play-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
+                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+              </svg>
+            </div>
+          </div>
+
+          <p class="video-help-caption">Toca el video para reproducir en pantalla completa</p>
+        </div>
+      </div>
+
+      <!-- Watermark Bottom Right -->
+      <footer class="slide-watermark">
+        <img src="assets/visiosound-official-logo.png?v=2" alt="VisioSound Stage Design" class="watermark-logo-img">
+      </footer>
+    </section>
+
+    <!-- ========================================================
+         PAGE 3: PREVISUALIZACIÓN & WORKFLOW
+         ======================================================== -->
+    <section class="slide" id="slide-3">
+      <div class="slide-bg-layer" aria-hidden="true"></div>
+
+      <div class="slide-inner video-slide-content">
+        <h2 class="page-title single-line-title">
+          PREVISUALIZACIÓN &amp; WORKFLOW
+        </h2>
+
+        <p class="video-slide-subtitle">
+          Diseño escénico en 3D, entornos en tiempo real y flujos de trabajo técnicos de VisioSound aplicados a la producción.
+        </p>
+
+        <!-- Video Player Card (16:9 Aspect Ratio) -->
+        <div class="video-showcase-wrapper">
+          <div class="video-screen-card" 
+               role="button" 
+               tabindex="0" 
+               data-video-url="https://www.youtube.com/embed/cyJ8TPr-N1Q?autoplay=1&rel=0" 
+               data-video-title="PREVISUALIZACIÓN &amp; WORKFLOW" 
+               aria-label="Reproducir video de Previsualización y Workflow">
+            <img src="assets/thumb-showreel-02.jpg" alt="Miniatura de Previsualización y Workflow" class="video-thumb-img">
+            <div class="video-ambient-overlay">
+              <div class="ambient-glow"></div>
+              <div class="stage-grid-lines"></div>
+            </div>
+            <!-- Central Cyan Play Button -->
+            <div class="central-play-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
+                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+              </svg>
+            </div>
+          </div>
+
+          <p class="video-help-caption">Toca el video para reproducir en pantalla completa</p>
+        </div>
+      </div>
+
+      <!-- Watermark Bottom Right -->
+      <footer class="slide-watermark">
+        <img src="assets/visiosound-official-logo.png?v=2" alt="VisioSound Stage Design" class="watermark-logo-img">
+      </footer>
+    </section>
+
+    <!-- ========================================================
+         PAGE 4: EXPERIENCIAS DESTACADAS
+         ======================================================== -->
+    <section class="slide" id="slide-4">
+      <div class="slide-bg-layer" aria-hidden="true"></div>
+
+      <div class="slide-inner">
+        <h2 class="page-title leading-tight single-line-title">
+          EXPERIENCIAS DESTACADAS
+        </h2>
+
+        <!-- Stat Highlight Pill -->
+        <div class="stats-badge">
+          <span class="stat-item"><span class="stat-num">+5</span> AÑOS DE TRAYECTORIA</span>
+          <span class="stat-sep">&bull;</span>
+          <span class="stat-item"><span class="stat-num">+50</span> SHOWS EN VIVO</span>
+        </div>
+
+        <div class="content-list-group">
+          <!-- Item 1: Servicios y Puesta en Escena -->
+          <article class="experience-card">
+            <h3 class="category-header sub-cyan">SERVICIOS Y PUESTA EN ESCENA</h3>
+            <p class="experience-line">
+              <span class="exp-chunk">Dirección Visual</span>
+              <span class="dot-sep">&bull;</span>
+              <span class="exp-chunk">Diseño de Iluminación</span>
+              <span class="dot-sep">&bull;</span>
+              <span class="exp-chunk">Escenografía 3D</span>
+            </p>
+          </article>
+
+          <!-- Item 2: Organismos Artísticos y Colaboraciones -->
+          <article class="experience-card">
+            <h3 class="category-header sub-cyan">ORGANISMOS ARTÍSTICOS Y COLABORACIONES</h3>
+            <div class="experience-lines-group">
+              <p class="experience-line">
+                <span class="exp-chunk">Orquesta Sinfónica (OSUNCUYO)</span>
+                <span class="dot-sep">&bull;</span>
+                <span class="exp-chunk">Orquesta Barroca</span>
+              </p>
+              <p class="experience-line">
+                <span class="exp-chunk">Vivero Musical UNCUYO</span>
+                <span class="dot-sep">&bull;</span>
+                <span class="exp-chunk">Coro Universitario de Mendoza (CUM)</span>
+              </p>
+              <p class="experience-line">
+                <span class="exp-chunk">Coro de Niños y Jóvenes UNCUYO (CNJ)</span>
+              </p>
+            </div>
+          </article>
+
+          <!-- Item 3: Producciones Independientes y Sociales -->
+          <article class="experience-card">
+            <h3 class="category-header sub-cyan">PRODUCCIONES INDEPENDIENTES Y SOCIALES</h3>
+            <p class="experience-line">
+              <span class="exp-chunk">Enzo De Lucca</span>
+              <span class="dot-sep">&bull;</span>
+              <span class="exp-chunk">Conciertos Temáticos</span>
+              <span class="dot-sep">&bull;</span>
+              <span class="exp-chunk">Eventos Sociales &amp; Bodas</span>
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <!-- Watermark Bottom Right -->
+      <footer class="slide-watermark">
+        <img src="assets/visiosound-official-logo.png?v=2" alt="VisioSound Stage Design" class="watermark-logo-img">
+      </footer>
+    </section>
+
+    <!-- ========================================================
+         PAGE 5: ESCENARIOS PRINCIPALES
+         ======================================================== -->
+    <section class="slide" id="slide-5">
+      <div class="slide-bg-layer" aria-hidden="true"></div>
+
+      <div class="slide-inner">
+        <h2 class="page-title single-line-title">
+          ESCENARIOS PRINCIPALES
+        </h2>
+
+        <div class="venues-grid">
+          <div class="venue-item"><span class="venue-name">TEATRO INDEPENDENCIA</span> <span class="venue-sep">|</span> <span class="venue-loc">MZA</span></div>
+          <div class="venue-item"><span class="venue-name">CINE TEATRO PLAZA</span> <span class="venue-sep">|</span> <span class="venue-loc">MZA</span></div>
+          <div class="venue-item"><span class="venue-name">NAVE UNCUYO</span> <span class="venue-sep">|</span> <span class="venue-loc">MZA</span></div>
+          <div class="venue-item"><span class="venue-name">CENTRO PATRIMONIAL CRISTOFORO COLOMBO</span> <span class="venue-sep">|</span> <span class="venue-loc">GODOY CRUZ, MZA</span></div>
+          <div class="venue-item"><span class="venue-name">TEATRO GRIEGO FRANK ROMERO DAY</span> <span class="venue-sep">|</span> <span class="venue-loc">MZA</span></div>
+          <div class="venue-item"><span class="venue-name">CINE TEATRO LA CONSULTA</span> <span class="venue-sep">|</span> <span class="venue-loc">SAN CARLOS, MZA</span></div>
+          <div class="venue-item"><span class="venue-name">CENTRO DE CONGRESOS Y EXPOSICIONES &ldquo;ALFREDO BUFANO&rdquo;</span> <span class="venue-sep">|</span> <span class="venue-loc">SAN RAFAEL</span></div>
+          <div class="venue-item"><span class="venue-name">CINE TEATRO DUCAL</span> <span class="venue-sep">|</span> <span class="venue-loc">RIVADAVIA</span></div>
+          <div class="venue-item"><span class="venue-name">CINE TEATRO SAN LUIS</span> <span class="venue-sep">|</span> <span class="venue-loc">SAN LUIS</span></div>
+        </div>
+      </div>
+
+      <!-- Watermark Bottom Right -->
+      <footer class="slide-watermark">
+        <img src="assets/visiosound-official-logo.png?v=2" alt="VisioSound Stage Design" class="watermark-logo-img">
+      </footer>
+    </section>
+
+    <!-- ========================================================
+         PAGE 6: STACK TECNOLÓGICO
+         ======================================================== -->
+    <section class="slide" id="slide-6">
+      <div class="slide-bg-layer" aria-hidden="true"></div>
+
+      <div class="slide-inner">
+        <h2 class="page-title single-line-title">STACK TECNOLÓGICO</h2>
+
+        <div class="tech-stack-container">
+          <!-- Group 1: Live VJing -->
+          <div class="tech-group">
+            <h3 class="category-header sub-cyan">LIVE VJING</h3>
+            <ul class="tech-items">
+              <li class="tech-item-row">
+                <img src="assets/logos/resolume-arena.svg" alt="Resolume Arena" class="software-logo-img" width="22" height="22" loading="lazy">
+                <span class="software-name">RESOLUME ARENA</span>
+              </li>
+              <li class="tech-item-row">
+                <img src="assets/logos/wire.svg" alt="Wire" class="software-logo-img" width="22" height="22" loading="lazy">
+                <span class="software-name">WIRE</span>
+              </li>
+              <li class="tech-item-row">
+                <img src="assets/logos/touchdesigner.png" alt="TouchDesigner" class="software-logo-img" width="22" height="22" loading="lazy">
+                <span class="software-name">TOUCHDESIGNER</span>
+              </li>
+              <li class="tech-item-row">
+                <img src="assets/logos/nestdrop.png" alt="NestDrop" class="software-logo-img" width="22" height="22" loading="lazy">
+                <span class="software-name">NESTDROP</span>
+              </li>
+              <li class="tech-item-row">
+                <img src="assets/logos/reaper.png" alt="Reaper" class="software-logo-img" width="22" height="22" loading="lazy">
+                <span class="software-name">REAPER (TIMECODE)</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Group 2: Software de Iluminación -->
+          <div class="tech-group">
+            <h3 class="category-header sub-cyan">SOFTWARE DE ILUMINACIÓN</h3>
+            <ul class="tech-items">
+              <li class="tech-item-row">
+                <img src="assets/logos/grandma2.svg" alt="GrandMA2" class="software-logo-img logo-grandma" width="40" height="18" loading="lazy">
+                <span class="software-name">GRANDMA2</span>
+              </li>
+              <li class="tech-item-row">
+                <img src="assets/logos/avolites.png" alt="Avolites" class="software-logo-img" width="22" height="22" loading="lazy">
+                <span class="software-name">AVOLITES</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Group 3: Diseño 3D y Escenarios -->
+          <div class="tech-group">
+            <h3 class="category-header sub-cyan">DISEÑO 3D Y ESCENARIOS</h3>
+            <ul class="tech-items">
+              <li class="tech-item-row">
+                <img src="assets/logos/unreal-engine.svg" alt="Unreal Engine" class="software-logo-img" width="22" height="22" loading="lazy">
+                <span class="software-name">UNREAL ENGINE</span>
+              </li>
+              <li class="tech-item-row">
+                <img src="assets/logos/blender.svg" alt="Blender" class="software-logo-img" width="22" height="22" loading="lazy">
+                <span class="software-name">BLENDER</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Group 4: Visuales e IA -->
+          <div class="tech-group">
+            <h3 class="category-header sub-cyan">VISUALES E IA</h3>
+            <ul class="tech-items">
+              <li class="tech-item-row">
+                <img src="assets/logos/comfyui.svg" alt="ComfyUI" class="software-logo-img" width="22" height="22" loading="lazy">
+                <span class="software-name">COMFYUI</span>
+              </li>
+              <li class="tech-item-row">
+                <img src="assets/logos/premiere-pro.svg" alt="Premiere Pro" class="software-logo-img" width="22" height="22" loading="lazy">
+                <span class="software-name">PREMIERE PRO</span>
+              </li>
+              <li class="tech-item-row">
+                <img src="assets/logos/after-effects.svg" alt="After Effects" class="software-logo-img" width="22" height="22" loading="lazy">
+                <span class="software-name">AFTER EFFECTS</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Watermark Bottom Right -->
+      <footer class="slide-watermark">
+        <img src="assets/visiosound-official-logo.png?v=2" alt="VisioSound Stage Design" class="watermark-logo-img">
+      </footer>
+    </section>
+
+    <!-- ========================================================
+         PAGE 7: CONTACTOS
+         ======================================================== -->
+    <section class="slide" id="slide-7">
+      <div class="slide-bg-layer" aria-hidden="true"></div>
+
+      <div class="slide-inner">
+        <h2 class="page-title">CONTACTOS</h2>
+
+        <div class="contact-links-container">
+          <!-- WhatsApp -->
+          <div class="contact-row">
+            <a href="https://wa.me/5492622615339?text=Hola%20V%C3%ADctor,%20estuve%20viendo%20tu%20portfolio%20de%20VisioSound%20y%20quisiera%20hacerte%20una%20consulta." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="contact-link" 
+               title="Enviar mensaje por WhatsApp">
+              <div class="icon-circle icon-wa">
+                <!-- WhatsApp SVG icon -->
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </div>
+              <span class="contact-text">+54 9 2622 615339</span>
+            </a>
+            <button class="copy-btn" data-copy="+54 9 2622 615339" aria-label="Copiar número de teléfono" title="Copiar número">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            </button>
+          </div>
+
+          <!-- Email -->
+          <div class="contact-row">
+            <a href="mailto:victorgaraytobares.producciones@gmail.com?subject=Contacto%20desde%20Portfolio%20VisioSound" 
+               class="contact-link" 
+               title="Enviar correo electrónico">
+              <div class="icon-circle icon-email">
+                <!-- Email SVG icon -->
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </div>
+              <span class="contact-text email-text">victorgaraytobares.producciones@gmail.com</span>
+            </a>
+            <button class="copy-btn" data-copy="victorgaraytobares.producciones@gmail.com" aria-label="Copiar correo" title="Copiar email">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            </button>
+          </div>
+
+          <!-- Instagram -->
+          <div class="contact-row">
+            <a href="https://instagram.com/visiosound.producciones" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="contact-link" 
+               title="Abrir Instagram">
+              <div class="icon-circle icon-ig">
+                <!-- Instagram SVG icon -->
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </div>
+              <span class="contact-text">@visiosound.producciones</span>
+            </a>
+          </div>
+
+          <!-- YouTube -->
+          <div class="contact-row">
+            <a href="https://www.youtube.com/@VictorGarayTobares" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="contact-link" 
+               title="Abrir canal de YouTube">
+              <div class="icon-circle icon-yt">
+                <!-- YouTube SVG icon -->
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon>
+                </svg>
+              </div>
+              <span class="contact-text">@VisioSoundST</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Watermark Bottom Right -->
+      <footer class="slide-watermark">
+        <img src="assets/visiosound-official-logo.png?v=2" alt="VisioSound Stage Design" class="watermark-logo-img">
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- ========================================================
+       VIDEO MODAL DIALOG
+       ======================================================== -->
+  <div id="videoModal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-window">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Cerrar reproductor">
+        <svg viewBox="0 0 24 24" width="26" height="26" stroke="currentColor" stroke-width="2" fill="none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalVideoTitle">REPRODUCTOR &bull; <span class="cyan-txt">VISIOSOUND</span></h3>
+      </div>
+
+      <div class="modal-video-container">
+        <!-- Responsive video iframe container -->
+        <div class="video-responsive" id="videoWrapper"></div>
+      </div>
+
+      <div class="modal-footer">
+        <p class="modal-hint">
+          🎬 Reproducción oficial de YouTube en alta definición &bull; VisioSound Stage Design
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js?v=3"></script>
+</body>
+</html>
